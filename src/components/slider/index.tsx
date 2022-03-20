@@ -1,20 +1,32 @@
 import React from "react";
 import classes from "./slider.module.scss";
-import { motion } from "framer-motion";
+import { SearchIcon } from "@heroicons/react/outline";
 const Slider = () => {
   return (
-    <motion.div
-      // initial={{
-      //   width: "10vw",
-      // }}
-      // animate={{
-      //   width: "35vw",
-      //   transition: { type: "spring", stiffness: 200 },
-      // }}
-      className={classes.container}
-    >
-      Slider
-    </motion.div>
+    <div className={classes.container}>
+      <div className={classes.content}>
+        {/* HEADER */}
+        <div className={classes.header}>
+          <div className={classes.input}>
+            <SearchIcon />
+            <input type="text" placeholder="Find a convesation" />
+          </div>
+        </div>
+        {/* CONTENT */}
+        <div className={classes.contantsContainer}>
+          <div className={classes.contants}>
+            s
+          </div>
+          {/* <div className={classes.profileOwnerAccount}>
+            <img
+              id={classes.ownerProfile}
+              src="/assets/images/sampleprofile.avif"
+              alt="profile"
+            />
+          </div> */}
+        </div>
+      </div>
+    </div>
   );
 };
 
