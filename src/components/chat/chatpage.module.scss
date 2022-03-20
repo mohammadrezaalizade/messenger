@@ -92,3 +92,16 @@
     }
   }
 }
+.EmptyChat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: color.$white;
+  grid-column: 4/-1;
+  user-select: none;
+  h1 {
+    color: color.$primeryPurpul;
+  }
+}

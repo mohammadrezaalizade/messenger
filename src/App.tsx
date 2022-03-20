@@ -11,8 +11,8 @@ function App() {
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Chatpage />} />
-        <Route path="/message" element={<MessagePage />}>
-          <Route path=":chatId" element={<MessagePage />} />
+        <Route path="/chat" element={<Chatpage />}>
+          <Route path=":chatId" element={<Chatpage />} />
         </Route>
       </Routes>
     </AnimatePresence>
