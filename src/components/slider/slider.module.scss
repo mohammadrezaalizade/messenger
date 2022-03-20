@@ -1,0 +1,6 @@
+@use "../../sass/colors.module.scss" as color;
+@use "../../sass/responsive.module.scss" as responsive;
+.container {
+  grid-column: 1/4;
+  background: color.$lightGray;
+}

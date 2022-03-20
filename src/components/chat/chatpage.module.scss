@@ -1,0 +1,94 @@
+@use "../../sass/colors.module.scss" as color;
+
+@mixin iconChatpage {
+  width: 1.5rem;
+  color: color.$primeryGray;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: color.$primeryPurpul;
+    color: color.$lightGray;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: color.$white;
+  grid-column: 4/-1;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    user-select: none;
+    color: #333333;
+    position: relative;
+    box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.1);
+    .smMenu {
+      display: none;
+      width: 1.5rem;
+      cursor: pointer;
+    }
+    .userInfo {
+      display: flex;
+      align-items: center;
+
+      .userName {
+        padding-right: 0.8rem;
+        font-weight: bold;
+      }
+    }
+    .call {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        @include iconChatpage;
+      }
+    }
+  }
+  .chatbody {
+    background: color.$white;
+    flex: 1;
+  }
+  .inputContainer {
+    border-top: 1.5px solid color.$primeryGray;
+    padding: 1rem 1.5rem;
+    user-select: none;
+    .input {
+      display: flex;
+      background: color.$secondryGray;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      #messageInput {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        color: #333333;
+        &::placeholder {
+          color: color.$primeryGray;
+        }
+      }
+      .userTools {
+        display: flex;
+        gap: 0.2rem;
+        svg {
+          @include iconChatpage;
+        }
+        #sendMessage {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

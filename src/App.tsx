@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.scss";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Chatpage, MessagePage } from "./components";
+import { AnimatePresence } from "framer-motion";
 function App() {
+  const location = useLocation();
+  console.log(location);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence exitBeforeEnter>
+      <Routes location={location} key={location.key}>
+        <Route path="/" element={<Chatpage />} />
+        <Route path="/message" element={<MessagePage />}>
+          <Route path=":chatId" element={<MessagePage />} />
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 }
 
