@@ -2,7 +2,7 @@
 @use "../../sass/responsive.module.scss" as responsive;
 .container {
   grid-column: 1/4;
-  background: color.$lightGray;
+  background: #f6f6fd;
   padding: 1rem 0.5rem;
   .content {
     background: transparent;
@@ -36,10 +36,9 @@
       display: flex;
       position: relative;
       flex-direction: column;
-      
+
       .contants {
         flex: 1;
-      
       }
       .profileOwnerAccount {
         position: relative;

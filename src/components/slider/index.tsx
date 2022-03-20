@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./slider.module.scss";
 import { SearchIcon } from "@heroicons/react/outline";
+import Contant from "./Contant";
 const Slider = () => {
   return (
     <div className={classes.container}>
@@ -15,7 +16,11 @@ const Slider = () => {
         {/* CONTENT */}
         <div className={classes.contantsContainer}>
           <div className={classes.contants}>
-            s
+            <Contant />
+            <Contant />
+            <Contant />
+            <Contant />
+            <Contant />
           </div>
           {/* <div className={classes.profileOwnerAccount}>
             <img
